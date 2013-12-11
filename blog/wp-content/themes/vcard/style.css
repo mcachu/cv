@@ -1,0 +1,1204 @@
+/*
+Theme Name: VCard
+Theme URI: http://siteorigin.com/theme/vcard/
+Author: SiteOrigin
+Author URI: http://siteorigin.com/
+Version: 1.0.5
+License: GPL 3.0
+License URI: http://www.gnu.org/copyleft/gpl.html
+Description: vCard is the perfect theme for your personal online presence. It gives you simple blog and portfolio functionality as well as some shortcodes you can use to create a professional online resume.
+Tags: light, yellow, one-column, fixed-width, custom-background, custom-header, custom-menu, editor-style, featured-images
+*/
+
+/* =Reset 
+-------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* =General 
+-------------------------------------------------------------- */
+
+body {
+	font: 13px Verdana, sans-serif;
+}
+
+.container {
+	width: 860px;
+	
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+a {
+	color: #2793b5;
+}
+
+/* =Page 
+-------------------------------------------------------------- */
+
+#page {
+	position: relative;
+	
+	background: #f9f9f9 url(images/page-bg.png) repeat;
+	border: 1px solid #FFF;
+	border-width: 1px 0;
+	box-shadow: 0 2px 2px RGBA(0,0,0,0.1);
+	margin: 100px 0 18px 0;
+	padding: 30px 40px 30px 120px;
+}
+
+#page-decoration {
+	position: absolute;
+	top: -60px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	
+	background: RGBA(0,0,0,0.01);
+}
+
+#page-shadow {
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 100%;
+	height: 24px;
+	
+	background: url(images/page-shadow.png) no-repeat center center;
+}
+
+#page-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	
+	background: url(images/page-top.png) repeat-x;
+}
+
+#page-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	
+	background: url(images/page-bottom.png) repeat-x;
+}
+
+/* =Main Menu 
+-------------------------------------------------------------- */
+
+#main-menu {
+	position: absolute;
+	top: 30px;
+	left: -51px;
+	width: 144px;
+	
+	font-family: Verdana, sans-serif;
+}
+
+#main-menu li {
+	position: relative;
+	width: 144px;
+	height: 41px;
+	
+	background: url(images/sprites/tab-inactive.png) no-repeat;
+	display: block;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+#main-menu li a {
+	color: #d4d4d4;
+	display: block;
+	font-size: 10px;
+	padding: 16px 0 15px 60px;
+	text-decoration: none;
+	text-shadow: 0 0 2px rgba(0,0,0,0.02);
+}
+
+#main-menu li.current-menu-item {
+	background: url(images/sprites/tab-active.png) no-repeat;
+}
+
+#main-menu li.current-menu-item a {
+	color: #505259;
+	text-shadow: none;
+}
+
+/* =Main Menu  : Icons 
+-------------------------------------------------------------- */
+
+#main-menu li em {
+	position: absolute;
+	top: 14px;
+	left: 18px;
+	width: 16px;
+	height: 16px;
+	
+	background-image: url(images/icons/document.png);
+	background-repeat: no-repeat;
+}
+
+#main-menu li.page-home-php em {
+	background-image: url(images/icons/home.png);
+}
+
+#main-menu li.page-resume-php em {
+	background-image: url(images/icons/resume.png);
+}
+
+#main-menu li.page-portfolio-php em {
+	background-image: url(images/icons/work.png);
+}
+
+#main-menu li.page-contact-php em {
+	background-image: url(images/icons/contact.png);
+}
+
+#main-menu li.page-blog-php em {
+	background-image: url(images/icons/blog.png);
+}
+
+/* =Site Info 
+-------------------------------------------------------------- */
+
+#site-info {
+	margin-bottom: 40px;
+}
+
+#site-info a {
+	text-decoration: none;
+}
+
+#site-info img {
+	box-shadow: 0 2px 3px RGBA(0,0,0,0.15);
+	float: left;
+}
+
+#site-info .text {
+	margin-left: 160px;
+}
+
+#site-info h1 {
+	color: #494644;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 50px;
+	margin-bottom: 10px;
+	padding-top: 30px;
+}
+
+#site-info h2 {
+	color: #7a7674;
+	font-size: 16px;
+}
+
+/* =Content 
+-------------------------------------------------------------- */
+
+#content {
+	color: #5f5e5b;
+	font-size: 12px;
+	margin-left: 0px;
+}
+
+h1.entry-title {
+	color: #484744;
+	font-size: 26px;
+	margin-bottom: 20px;
+}
+
+/* =Content  : Entry Info 
+-------------------------------------------------------------- */
+
+.entry-info {
+	margin: -15px 0 25px 0;
+}
+
+.entry-info a {
+	color: #53524f;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* =Content  : Entry Content 
+-------------------------------------------------------------- */
+
+.entry-content {
+	color: #6c6a67;
+	line-height: 1.5em;
+}
+
+.entry-content p {
+	margin: 1.5em 0;
+}
+
+.entry-content *:first-child {
+	margin-top: 0;
+}
+
+.entry-content *:last-child {
+	margin-bottom: 0;
+}
+
+.entry-content strong {
+	font-weight: bold;
+}
+
+.entry-content img {
+	height: auto;
+	
+	max-width: 100%;
+}
+
+/* =Content  : Entry Content  : Images 
+-------------------------------------------------------------- */
+
+.entry-content img {
+	height: auto;
+	
+	max-width: 100%;
+}
+
+.entry-content .alignright {
+	float: right;
+	margin: 0 0 20px 20px;
+}
+
+.entry-content .alignleft {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.entry-content .aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.entry-content .alignleft,
+.entry-content .alignright,
+.entry-content .aligncenter {
+	margin-bottom: 1.5em;
+}
+
+.entry-content .wp-caption {
+	background: #FCFCFC;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+}
+
+.entry-content .wp-caption a.attachment {
+	line-height: 0;
+}
+
+.entry-content .wp-caption img {
+	margin: 5px;
+	margin-bottom: 5px;
+}
+
+.entry-content .wp-caption a {
+	line-height: 0;
+}
+
+.entry-content .wp-caption p.wp-caption-text {
+	color: #999;
+	font: italic 12px Georgia, "Times New Roman", Times, serif;
+	margin: 0;
+	padding: 5px 5px 10px 5px;
+	text-align: center;
+}
+
+.entry-content .wp-caption p {
+	line-height: 1;
+}
+
+.entry-content .wp-caption p a {
+	color: #333;
+	line-height: 1;
+}
+
+.entry-content .gallery-caption {
+	font-size: 11px;
+}
+
+/* =Content  : Entry Content  : Quotes 
+-------------------------------------------------------------- */
+
+blockquote {
+	font-family: Georgia, "Bitstream Charter", serif;
+	font-size: 13px;
+	font-style: italic;
+	font-weight: normal;
+	margin: 0 3em;
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote cite {
+	color: #666;
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+/* =Content  : Entry Content  : Subscript and Superscript 
+-------------------------------------------------------------- */
+
+sup,
+sub {
+	position: relative;
+	height: 0;
+	
+	font-size: 10px;
+	line-height: 1;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+	
+}
+
+sub {
+	top: .5ex;
+	
+}
+
+/* =Content  : Entry Content  : Definition lists 
+-------------------------------------------------------------- */
+
+.entry-content dl {
+	margin: 0 1.625em;
+}
+
+.entry-content dt {
+	font-weight: bold;
+}
+
+.entry-content dd {
+	margin-bottom: 1.625em;
+}
+
+/* =Content  : Entry Content  : Table 
+-------------------------------------------------------------- */
+
+.entry-content table {
+	width: 100%;
+	
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 1.625em;
+}
+
+.entry-content th {
+	color: #666;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	text-transform: uppercase;
+}
+
+.entry-content td {
+	border-top: 1px solid #ddd;
+	padding: 6px 10px 6px 0;
+}
+
+/* =Content  : Entry Content  : Lists 
+-------------------------------------------------------------- */
+
+.entry-content ul,
+.entry-content ol {
+	line-height: 1.9em;
+	margin: 1.5em 0;
+	padding-left: 1.65em;
+}
+
+.entry-content ul {
+	list-style-type: disc;
+}
+
+.entry-content ol {
+}
+
+.entry-content ul ul,
+.entry-content ol ol,
+.entry-content ul ol,
+.entry-content ol ul {
+	margin: 0;
+}
+
+.entry-content ul,
+ol {
+	margin: 0 0 1.625em 2.5em;
+}
+
+.entry-content ul {
+	list-style: square;
+}
+
+.entry-content ol {
+	list-style-type: decimal;
+}
+
+.entry-content ol ol {
+	list-style: upper-alpha;
+}
+
+.entry-content ol ol ol {
+	list-style: lower-roman;
+}
+
+.entry-content ol ol ol ol {
+	list-style: lower-alpha;
+}
+
+/* =Content  : Entry Content  : Headings 
+-------------------------------------------------------------- */
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	color: #484744;
+	margin: 1.5em 0;
+}
+
+.entry-content h1 {
+	font-size: 24px;
+}
+
+.entry-content h2 {
+	font-size: 21px;
+}
+
+.entry-content h3 {
+	font-size: 18px;
+}
+
+.entry-content h4 {
+	font-size: 16px;
+}
+
+.entry-content h5 {
+	font-size: 14px;
+}
+
+.entry-content h6 {
+	font-size: 12px;
+}
+
+/* =Content  : Entry Content  : Gallery 
+-------------------------------------------------------------- */
+
+.entry-content .gallery .gallery-item {
+	margin: 0;
+}
+
+/* =Content  : Page Templates 
+-------------------------------------------------------------- */
+
+.page-template-page-home-php .post,
+.page-template-page-resume-php .post,
+.page-template-page-contact-php .post {
+	margin-left: 160px;
+}
+
+/* =Footer 
+-------------------------------------------------------------- */
+
+#footer {
+	color: #6c6a67;
+	font-size: 11px;
+	margin: 18px 0 100px 0;
+	padding: 0 8px;
+}
+
+#footer a {
+	color: #5f5e5b;
+	text-decoration: none;
+}
+
+#footer .copyright {
+	float: left;
+}
+
+#footer .designed {
+	float: right;
+}
+
+/* =Twitter 
+-------------------------------------------------------------- */
+
+.latest-tweet {
+	width: 130px;
+	
+	background: url(images/twitter-bg.png);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	min-height: 100px;
+	padding: 12px;
+}
+
+/* =Shortcodes 
+-------------------------------------------------------------- */
+
+/* =Shortcodes  : Portfolio Gallery 
+-------------------------------------------------------------- */
+
+.entry-content .portfolio-gallery {
+	margin: 0 -10px -20px -10px;
+}
+
+.entry-content .portfolio-gallery a.entry {
+	position: relative;
+	width: 220px;
+	height: 220px;
+	
+	display: block;
+	float: left;
+	line-height: 0;
+	margin: 0 10px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.entry-content .portfolio-gallery .entry .title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	
+	background: #1c1c1c;
+	background: rgba(0,0,0,0.35);
+}
+
+.entry-content .portfolio-gallery .entry .title h4 {
+	color: #EEE;
+	display: block;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.2em;
+	padding: 10px;
+}
+
+.entry-content .portfolio-gallery .entry .caption {
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	width: 100%;
+	
+	background: #1c1c1c;
+	background: rgba(0,0,0,0.25);
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+.entry-content .portfolio-gallery .entry:hover .caption {
+	bottom: 0;
+	
+	opacity: 1;
+}
+
+.entry-content .portfolio-gallery .entry .caption p {
+	color: #EEE;
+	line-height: 1.4em;
+	margin: 0;
+	padding: 8px;
+}
+
+/* =Shortcodes  : Resume Entry 
+-------------------------------------------------------------- */
+
+.resume-entry {
+	position: relative;
+	
+	margin-bottom: 10px;
+}
+
+.resume-entry .date {
+	color: #484744;
+	float: right;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-style: italic;
+}
+
+.resume-entry h4 {
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.resume-entry p {
+	margin: 0;
+}
+
+.resume-entry-decoration,
+.resume-skill-decoration {
+	position: absolute;
+	top: 0;
+	left: -36px;
+	width: 6px;
+	height: 100%;
+	
+	background: url(images/resume-decoration.png);
+}
+
+/* =Shortcodes  : Resume Skill 
+-------------------------------------------------------------- */
+
+.resume-skill {
+	position: relative;
+	
+	margin-bottom: 10px;
+}
+
+.resume-skill h4 {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 0;
+}
+
+.resume-skill .bar {
+	width: 75%;
+	height: 25px;
+	
+	background: #eeeeee;
+	float: right;
+}
+
+.resume-skill .bar-fill {
+	position: relative;
+	width: 50%;
+	height: 25px;
+	
+	background: url(images/skill-bar-bg.png);
+}
+
+.resume-skill .bar-edge {
+	position: absolute;
+	top: 0;
+	width: 6px;
+	height: 25px;
+	
+	background: url(images/skill-bar-edge.png);
+}
+
+.resume-skill .bar-edge-left {
+	left: 0;
+	
+}
+
+.resume-skill .bar-edge-right {
+	right: 0;
+	
+}
+
+/* =Contact Form 
+-------------------------------------------------------------- */
+
+.contact-form {
+	margin-left: -160px;
+}
+
+.contact-form .field {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.contact-form .field label {
+	width: 160px;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #6c6a67;
+	display: inline-block;
+	padding-right: 30px;
+	text-align: right;
+}
+
+.contact-form .field input[type=text],
+.contact-form .field input[type=email],
+.contact-form .field textarea {
+	background: #f9f9f9;
+	border: 1px solid #bbbbbb;
+	box-shadow: inset 2px 2px 1px rgba(0,0,0,0.05);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #555;
+	font-family: Verdana, sans-serif;
+	padding: 8px;
+}
+
+.contact-form .field input[type=text],
+.contact-form .field input[type=email] {
+	width: 250px;
+	
+	display: inline-block;
+}
+
+.contact-form .field.message label {
+	display: none;
+}
+
+.contact-form .field.message {
+	margin-left: 160px;
+}
+
+.contact-form .field textarea {
+	width: 100%;
+	
+}
+
+.contact-form .field input[type=submit] {
+	background: url(images/button-bg.png) repeat-x;
+	border: none;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+	color: #505259;
+	cursor: pointer;
+	display: inline-block;
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+	margin-left: 160px;
+	padding: 6px 14px;
+}
+
+/* =Blog Post Loop 
+-------------------------------------------------------------- */
+
+#blog-loop .post {
+	margin-bottom: 40px;
+}
+
+#blog-loop .sticky.post {
+}
+
+#blog-loop .post .thumbnail {
+	width: 120px;
+	
+	float: left;
+	line-height: 0;
+}
+
+#blog-loop .post .post-summary {
+	border-top: 1px solid #ebebeb;
+	border-top-color: RGBA(0,0,0,0.05);
+	margin-left: 160px;
+	padding-top: 25px;
+}
+
+#blog-loop a.entry-link {
+	color: #484744;
+	text-decoration: none;
+}
+
+#blog-loop .post h3 {
+	color: #484744;
+	font-size: 18px;
+	margin-bottom: 4px;
+}
+
+#blog-loop .post .date {
+	color: #5f5e5b;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	margin-bottom: 15px;
+}
+
+#blog-loop .post .date a {
+	color: #5f5e5b;
+}
+
+/* =Blog Post Loop  : Navigation 
+-------------------------------------------------------------- */
+
+#blog-loop .post-nav {
+	margin-bottom: 17px;
+	margin-top: 40px;
+}
+
+#blog-loop .post-nav em {
+	position: absolute;
+	top: 50%;
+	width: 44px;
+	height: 48px;
+	
+	display: block;
+	margin-top: -24px;
+}
+
+#blog-loop .post-nav a {
+	position: relative;
+	
+	color: #494644;
+	display: block;
+	text-decoration: none;
+}
+
+#blog-loop .post-nav a.nav-prev {
+	float: left;
+	margin-left: -76px;
+}
+
+#blog-loop .post-nav a.nav-next {
+	float: right;
+	margin-right: 5px;
+}
+
+#blog-loop .post-nav a.nav-prev em {
+	left: -58px;
+	
+	background: url(images/sprites/nav-newer.png) no-repeat;
+}
+
+#blog-loop .post-nav a.nav-next em {
+	right: -58px;
+	
+	background: url(images/sprites/nav-older.png) no-repeat;
+}
+
+/* =Comments 
+-------------------------------------------------------------- */
+
+#comments {
+	margin-top: 30px;
+}
+
+/* =Comments  : Comment List 
+-------------------------------------------------------------- */
+
+#comments-title {
+	color: #494644;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 40px 0 30px 0;
+}
+
+#comment-list .comment,
+#comment-list .children,
+#comment-list .trackback,
+#comment-list .pingback {
+	margin-top: 30px;
+}
+
+#comment-list .comment:first-of-type {
+	margin-top: 0;
+}
+
+#comment-list .comment-avatar {
+	position: relative;
+	
+	float: left;
+}
+
+#comment-list .comment-decoration {
+	position: absolute;
+	top: 0;
+	right: -46px;
+	width: 6px;
+	height: 79px;
+	
+	background-image: url(images/resume-decoration.png);
+}
+
+#comment-list .comment-main {
+	margin-left: 160px;
+}
+
+#comment-list .pingback .comment-main {
+	margin-left: 0;
+}
+
+#comment-list .comment-text {
+	color: #6c6a67;
+	font-size: 12px;
+	margin-bottom: 22px;
+}
+
+#comment-list .comment-info .date {
+	color: #6c6a67;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+#comment-list .comment-info .author {
+	display: inline-block;
+	font: bold 11px Verdana, sans-serif;
+	margin-right: 5px;
+}
+
+#comment-list .bypostauthor .comment-info .author {
+}
+
+#comment-list .comment-info .author a {
+	color: #6c6a67;
+	text-decoration: none;
+}
+
+/* =Comments  : Form 
+-------------------------------------------------------------- */
+
+#reply-title {
+	color: #494644;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 40px 0 30px 0;
+}
+
+#respond form p {
+	display: block;
+	margin-bottom: 10px;
+}
+
+#respond form p.comment-notes {
+	color: #94908d;
+	font-size: 11px;
+	margin: 0 0 15px 160px;
+}
+
+#respond form label {
+	width: 160px;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #6c6a67;
+	display: inline-block;
+	float: left;
+	margin-top: 7px;
+	padding-right: 30px;
+	text-align: right;
+}
+
+#respond form input[type=text],
+#respond form input[type=email],
+#respond form textarea {
+	background: #f9f9f9;
+	border: 1px solid #bbbbbb;
+	box-shadow: inset 2px 2px 1px rgba(0,0,0,0.05);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #555;
+	font-family: Verdana, sans-serif;
+	padding: 8px;
+}
+
+#respond form input[type=text],
+#respond form input[type=email] {
+	width: 250px;
+	
+	display: block;
+	margin-left: 160px;
+}
+
+#respond form textarea {
+	width: 100%;
+	
+}
+
+#respond form input[type=submit] {
+	background: url(images/button-bg.png) repeat-x;
+	border: none;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+	color: #505259;
+	cursor: pointer;
+	display: inline-block;
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+	padding: 6px 14px;
+}
+
+#respond form .required {
+	display: none;
+}
+
+#respond form .comment-form-comment,
+#respond form .form-submit {
+	margin-left: 160px;
+}
+
+/* =Footer Widgets 
+-------------------------------------------------------------- */
+
+#footer-widgets {
+	margin: 0 -15px;
+}
+
+#footer-widgets .widget {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #777777;
+	float: left;
+	margin-top: 25px;
+	padding: 0 15px;
+	word-wrap: break-word;
+}
+
+#footer-widgets .widget img {
+	height: auto;
+	
+	max-width: 100%;
+}
+
+#footer-widgets .widget h2.widgettitle {
+	color: #474747;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+#footer-widgets .widget ul li {
+	margin-bottom: 4px;
+}
+

@@ -1,0 +1,265 @@
+html .mceContentBody {
+	max-width: 540px;
+    font: 13px Verdana, sans-serif;
+}
+
+/* @group Entry Content */
+
+*{
+	color: #6c6a67;
+	line-height: 1.5em;
+}
+
+p{
+	margin: 1.5em 0;
+}
+
+*:first-child{
+	margin-top: 0;
+}
+
+*:last-child{
+	margin-bottom: 0;
+}
+
+strong{
+	font-weight: bold;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+/* @group Images */
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.alignright{
+	float: right;
+	margin: 0 0 20px 20px;
+}
+
+.alignleft{
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft,
+.alignright,
+.aligncenter{
+	margin-bottom: 1.5em;
+}
+
+.wp-caption{
+	background: #FCFCFC;
+	margin-bottom: 20px;
+	
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.wp-caption img{
+	margin: 5px;
+	margin-bottom: 5px;
+}
+
+.wp-caption a{
+	line-height: 0;
+}
+
+.wp-caption p{
+	text-align: center;
+	margin-top: 0;
+	padding: 10px 5px;
+	font: italic 12px Georgia, "Times New Roman", Times, serif;
+	color: #999;
+}
+
+.wp-caption p{
+	line-height: 1;
+}
+
+.wp-caption p a{
+	color: #333;
+	line-height: 1;
+}
+
+/* @end */
+
+/* @group Quotes */
+
+blockquote {
+	font-family: Georgia, "Bitstream Charter", serif;
+	font-style: italic;
+	font-weight: normal;
+	margin: 0 3em;
+	font-size: 13px;
+}
+blockquote em, blockquote i, blockquote cite {
+	font-style: normal;
+}
+blockquote cite {
+	color: #666;
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+
+
+/* @end */
+
+/* @group Subscript and Superscript */
+
+sup,
+sub {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+
+
+
+/* @end */
+
+/* @group Definition lists */
+
+dl {
+	margin: 0 1.625em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-bottom: 1.625em;
+}
+
+/* @end */
+
+/* @group Table */
+
+table{
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 1.625em;
+	width: 100%;
+}
+th{
+	color: #666;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	text-transform: uppercase;
+}
+td{
+	border-top: 1px solid #ddd;
+	padding: 6px 10px 6px 0;
+}
+
+
+
+/* @end */
+
+/* @group Lists */
+
+ul,
+ol{
+	margin: 1.5em 0;
+	padding-left: 1.65em;
+	line-height: 1.9em;
+}
+
+ul{
+	list-style-type: disc;
+}
+
+ol{
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+	margin: 0;
+}
+
+ul, ol {
+	margin: 0 0 1.625em 2.5em;
+}
+ul {
+	list-style: square;
+}
+ol {
+	list-style-type: decimal;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+
+/* @end */
+
+/* @group Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	color: #484744;
+	margin: 1.5em 0;
+}
+
+h1{
+	font-size: 24px;
+}
+
+h2{
+	font-size: 21px;
+}
+
+h3{
+	font-size: 18px;
+}
+
+h4{
+	font-size: 16px;
+}
+
+h5{
+	font-size: 14px;
+}
+
+h6{
+	font-size: 12px;
+}
+
+
+/* @end */
+
+/* @end */

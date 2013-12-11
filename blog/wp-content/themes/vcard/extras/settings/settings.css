@@ -1,0 +1,32 @@
+.colorpicker-wrapper{
+    position: relative;
+}
+
+.colorpicker-wrapper .color-indicator{
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+    float: left;
+}
+
+.colorpicker-wrapper .farbtastic-container{
+    position: absolute;
+    top: 28px;
+    left: 0px;
+    background: green;
+
+    padding: 8px;
+    background: #F8F8F8;
+    border: 1px solid #E0E0E0;
+    
+    z-index: 2;
+}
+
+.premium-teaser {
+    
+}
+
+.premium-teaser a{
+    
+}
